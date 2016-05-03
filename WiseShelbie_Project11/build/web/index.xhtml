@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"> 
+
+    <h:head> 
+        <title>Graduate Registration</title>
+        <link type="text/css" rel="stylesheet" href="student.css"/>
+    </h:head>
+
+    <h:body>
+        <h2>Northwest Missouri State University</h2>
+        <h2>New Graduate Assistant Registration System</h2>
+        <h:form>
+            <h:panelGrid columns="3">
+
+                #{msgs.firstName}
+                <h:inputText id="firstName"
+                             label="#{msgs.firstName}"
+                             size="30"
+                             value="#{studentBean.firstName}"
+                             required="true"
+                             requiredMessage="Please enter your first name.">
+                </h:inputText> 
+                <h:message for="firstName" styleClass="errorMessage"/>
+
+                #{msgs.lastName}
+                <h:inputText id="lastName"
+                             label="#{msgs.lastName}"
+                             size="30"
+                             value="#{studentBean.lastName}"
+                             required="true"
+                             requiredMessage="Please enter your last name.">
+                </h:inputText> 
+                <h:message for="lastName" styleClass="errorMessage"/>
+
+                #{msgs.password}
+                <h:inputSecret id="password"
+                               label="#{msgs.password}"
+                               size="30"
+                               value="#{studentBean.password}"
+                               required="true"
+                               requiredMessage="Password must be at least 8-10 characters and contain at least one digit, one lowercase, and one uppercase letter.">
+                    <f:validateRegex pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12})" />
+                </h:inputSecret> 
+                <h:message for="password" styleClass="errorMessage"/>
+
+                #{msgs.greScore}
+                <h:inputText id="greScore"
+                             label="#{msgs.greScore}"
+                             size="30"
+                             value="#{studentBean.greScore}"
+                             required="true"
+                             requiredMessage="GRE Score cannot be blank."> 
+                    <f:validateDoubleRange minimum="#{studentBean.MIN_GRE}" maximum="#{studentBean.MAX_GRE}"/>
+                </h:inputText> 
+                <h:message for="greScore" styleClass="errorMessage"/>
+                
+                #{msgs.gpa}
+                <h:inputText id="gpa"
+                             label="#{msgs.gpa}"
+                             size="30"
+                             value="#{studentBean.gpa}"
+                             required="true"
+                             requiredMessage="GPA cannot be blank.">
+                    <f:validateDoubleRange minimum="0.0" maximum="#{studentBean.GPA}"/>                  
+                </h:inputText> 
+                <h:message for="gpa" styleClass="errorMessage"/>
+                
+                <h:commandButton value="Register"
+                                 action="reply" />
+
+            </h:panelGrid>
+        </h:form>     
+    </h:body>
+</html>
+

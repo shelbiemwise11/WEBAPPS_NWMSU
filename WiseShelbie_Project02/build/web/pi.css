@@ -1,0 +1,17 @@
+table{
+    background-color:darkgrey;
+}
+
+.button{
+    display:block;
+    width: 100%
+    
+}
+
+#PITABLE{
+    background: lightgray;
+}
+
+#DOWTABLE{
+    background: lightblue;
+}

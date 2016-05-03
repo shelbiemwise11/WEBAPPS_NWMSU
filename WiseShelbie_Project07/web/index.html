@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Bearcat Exercise</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link type="text/css" rel="stylesheet" href="calories.css">
+    </head>
+    <body>
+        <h1>Bearcat Exercise Calculator </h1>
+        <form action="calories" method="get">
+        <div> Activities: <select name="activity"> 
+            <option value="Aerobics">Aerobics</option>
+            <option value="Baseball">Baseball</option>
+            <option value="Billiards">Billiards</option>
+            <option value="Climbing">Climbing</option>
+            <option value="Fencing">Fencing</option>
+            <option value="Golf">Golf</option>
+            <option value="Hockey">Hockey</option>
+            <option value="Rugby">Rugby</option>
+            <option value="Swimming">Swimming</option>
+            </select> 
+        </div><br>
+        <fieldset >
+           <legend> Method of Engagement </legend>          
+                <input type="radio" name="method" value="part" />Participation
+                <input type="radio" name="method" value="watch" /> Watching <br><br>
+               Duration (hours): <input type="text" name="duration" id="duration"/> 
+                
+        </fieldset>
+        <fieldset class="demog">
+           <legend> Demographics </legend>          
+                <input type="radio" name="gender" value="male" id="male" />Male <br>
+                <input type="radio" name="gender" value="female" id="female" /> Female<br><br>
+                Height: <input type="text" name="height" id="heightduration"/> 
+                Weight: <input type="text" name="weight" id="weight"/> 
+                Age:    <input type="text" name="age" id="age"/> <br><br>
+                <input type="checkbox"value="metric" id="metric"/> Use Metric 
+        </fieldset>
+        <button type="submit" value="calculate" id="calculate">Calculate Calories</button>
+        </form>
+    </body>
+</html>

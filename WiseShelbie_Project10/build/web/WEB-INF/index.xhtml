@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Weight Loss</title>
+    </h:head>
+    <h:body>
+        <h1>The Amazing Space Weight Loss/Gain Program</h1>
+        <p>Are you having trouble getting to your ideal "summer weight"? 
+        Whether you would like to be lighter or heavier, fear now, the Amazing Space Weight..
+        ...............
+        ...........</p>
+        <h2>Instructions:</h2>
+        <p>1. Enter your name, weight on Earth...
+        2. .............efhdifhdihf
+        3. difhsdiofhsdifhsdifh</p>
+        
+        <h:form>
+            <h:panelGrid columns="2">
+                Name:
+                <h:inputText value="#{weightBean.name}"/>
+                Weight on Earth:
+                <h:inputText value="#{weightBean.earthWeight}"/>
+                Desired Weight:
+                <h:inputText value="#{weightBean.desiredWeight}"/>
+                Potential Planet(s):
+                <h:inputText value="#{weightBean.potPlanets}"/>
+                Use Metric:
+                <h:selectBooleanCheckbox value="metric"/>
+                <h:commandButton value="Find Optimal Planet" action="#{weightBean.calculate}"/>
+            </h:panelGrid>
+        </h:form>
+            
+    </h:body>
+</html>
+

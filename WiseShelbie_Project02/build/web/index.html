@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Pi and Day of the Week Calculators</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type ="text/css" rel ="stylesheet" href="pi.css">
+        <script type="text/javascript" src="pi.js"></script>
+    </head>
+    <body>
+        <div id ="PITABLE">
+        <h1>Pi Calculator</h1>
+        <h2> This estimates PI using the formula:4*(1-1/3+1/5+....) </h2>
+        <table border="1">
+
+            <tr>
+                <td>Number of Iterations</td>                       
+                <td><input type="text" id="iterations"></td>
+            <tr>
+
+                <td colspan="2"><input type="button" class="button" id="calculatePI" value="calculatePI"></td>
+
+            <tr>
+                <td>Estimate</td>
+                <td><input type="text" id="estimate" disabled="disabled"></td>
+            </tr>
+            <tr>
+                <td>Percentage Error</td>
+                <td> <input type="text" id="percError" disabled="disabled"></td>
+            </tr>
+       
+        </table>
+        </div>
+        <div id="DOWTABLE">
+            <h1> Day of the Week Calculator</h1>
+            <h2> This calculates the day of the week (Where 0=Saturday, 1=Sunday,...6=Friday)</h2>
+            <table border="1">
+                <tbody>
+                    <tr>
+                        <td>Year: </td>
+                        <td><input type="text" id="year"></td>
+                    </tr>
+                    <tr>
+                        <td>Month: </td>
+                        <td><input type="text" id="mo"></td>
+                    </tr>
+                    <tr>
+                        <td>Day of the Month: </td>
+                        <td><input type="text" id="dom"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="button" id="calculateDOW" value="Calculate day of the week"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

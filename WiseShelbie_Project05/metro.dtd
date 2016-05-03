@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Document   : metro.dtd
+    Description: Describes metropolitan area information.
+                 Population is measured in millions.
+                 Area is measured in square kilometers.
+-->
+<!ELEMENT metroAreaList (metroArea+)>
+<!ELEMENT metroArea (name, country, population, area)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT population (#PCDATA)>
+<!ELEMENT area (#PCDATA)>

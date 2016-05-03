@@ -1,0 +1,12 @@
+h1{
+    color: darkgreen;
+}
+.results{
+    color: deeppink;
+    font-size: 24px;
+    
+}
+#pics{
+    display:none;
+    max-width: 50%;
+}
